@@ -139,13 +139,21 @@
     .appear.in { opacity: 1; transform: none; }
 
     /* =====================================================
-       AVATAR (SVG)
+       AVATAR (IMG)
        ===================================================== */
     .avatar {
       display: block;
       flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #0d0d0d;
     }
-    .avatar svg { display: block; width: 100%; height: 100%; }
+    .avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     /* =====================================================
        SECTION 1 — HERO
@@ -1002,53 +1010,7 @@
   </div>
 </nav>
 
-<!-- ========================================================
-     SVG AVATAR SYMBOLS
-     5名分のモノグラムアバター定義。
-     更新時は <symbol id="av-N"> 内の文字を変更
-     ======================================================== -->
-<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
-  <!-- かっしー -->
-  <symbol id="av-1" viewBox="0 0 80 80">
-    <rect width="80" height="80" fill="#0d0d0d"/>
-    <rect x="4" y="4" width="72" height="72" fill="none" stroke="#2a2a2a" stroke-width="0.5"/>
-    <text x="9" y="15" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="700" fill="#c8102e" letter-spacing="0.6">01</text>
-    <text x="40" y="55" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="38" font-weight="900" fill="#f4f2ed">か</text>
-    <rect x="56" y="68" width="16" height="1.5" fill="#c8102e"/>
-  </symbol>
-  <!-- むすびん -->
-  <symbol id="av-2" viewBox="0 0 80 80">
-    <rect width="80" height="80" fill="#0d0d0d"/>
-    <rect x="4" y="4" width="72" height="72" fill="none" stroke="#2a2a2a" stroke-width="0.5"/>
-    <text x="9" y="15" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="700" fill="#c8102e" letter-spacing="0.6">02</text>
-    <text x="40" y="55" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="38" font-weight="900" fill="#f4f2ed">む</text>
-    <rect x="56" y="68" width="16" height="1.5" fill="#c8102e"/>
-  </symbol>
-  <!-- きばちゃん -->
-  <symbol id="av-3" viewBox="0 0 80 80">
-    <rect width="80" height="80" fill="#0d0d0d"/>
-    <rect x="4" y="4" width="72" height="72" fill="none" stroke="#2a2a2a" stroke-width="0.5"/>
-    <text x="9" y="15" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="700" fill="#c8102e" letter-spacing="0.6">03</text>
-    <text x="40" y="55" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="38" font-weight="900" fill="#f4f2ed">き</text>
-    <rect x="56" y="68" width="16" height="1.5" fill="#c8102e"/>
-  </symbol>
-  <!-- だざい -->
-  <symbol id="av-4" viewBox="0 0 80 80">
-    <rect width="80" height="80" fill="#0d0d0d"/>
-    <rect x="4" y="4" width="72" height="72" fill="none" stroke="#2a2a2a" stroke-width="0.5"/>
-    <text x="9" y="15" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="700" fill="#c8102e" letter-spacing="0.6">04</text>
-    <text x="40" y="55" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="38" font-weight="900" fill="#f4f2ed">だ</text>
-    <rect x="56" y="68" width="16" height="1.5" fill="#c8102e"/>
-  </symbol>
-  <!-- りお -->
-  <symbol id="av-5" viewBox="0 0 80 80">
-    <rect width="80" height="80" fill="#0d0d0d"/>
-    <rect x="4" y="4" width="72" height="72" fill="none" stroke="#2a2a2a" stroke-width="0.5"/>
-    <text x="9" y="15" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="700" fill="#c8102e" letter-spacing="0.6">05</text>
-    <text x="40" y="55" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="38" font-weight="900" fill="#f4f2ed">り</text>
-    <rect x="56" y="68" width="16" height="1.5" fill="#c8102e"/>
-  </symbol>
-</svg>
+<!-- アバター画像は images/ ディレクトリに配置 (kasshi / musubin / kibachan / dazai / rio) -->
 
 
 <!-- ========================================================
@@ -1135,27 +1097,27 @@
     <!-- 5名プレビュー -->
     <div class="mp-grid appear">
       <div class="mp-item">
-        <div class="mp-avatar avatar"><svg><use href="#av-1"/></svg></div>
+        <div class="mp-avatar avatar"><img src="images/kasshi.png" alt="かっしー" loading="lazy" decoding="async"></div>
         <div class="mp-name">かっしー</div>
         <div class="mp-sub">30代 ／ 男性</div>
       </div>
       <div class="mp-item">
-        <div class="mp-avatar avatar"><svg><use href="#av-2"/></svg></div>
+        <div class="mp-avatar avatar"><img src="images/musubin.png" alt="むすびん" loading="lazy" decoding="async"></div>
         <div class="mp-name">むすびん</div>
         <div class="mp-sub">40代 ／ 男性</div>
       </div>
       <div class="mp-item">
-        <div class="mp-avatar avatar"><svg><use href="#av-3"/></svg></div>
+        <div class="mp-avatar avatar"><img src="images/kibachan.png" alt="きばちゃん" loading="lazy" decoding="async"></div>
         <div class="mp-name">きばちゃん</div>
         <div class="mp-sub">20代 ／ 男性</div>
       </div>
       <div class="mp-item">
-        <div class="mp-avatar avatar"><svg><use href="#av-4"/></svg></div>
+        <div class="mp-avatar avatar"><img src="images/dazai.png" alt="だざい" loading="lazy" decoding="async"></div>
         <div class="mp-name">だざい</div>
         <div class="mp-sub">40代 ／ 男性</div>
       </div>
       <div class="mp-item">
-        <div class="mp-avatar avatar"><svg><use href="#av-5"/></svg></div>
+        <div class="mp-avatar avatar"><img src="images/rio.jpeg" alt="りお" loading="lazy" decoding="async"></div>
         <div class="mp-name">りお</div>
         <div class="mp-sub">40代 ／ 女性</div>
       </div>
@@ -1187,7 +1149,7 @@
            ============================================================ -->
       <div class="member-card appear">
         <div class="mc-head">
-          <div class="mc-avatar avatar"><svg><use href="#av-1"/></svg></div>
+          <div class="mc-avatar avatar"><img src="images/kasshi.png" alt="かっしー" loading="lazy" decoding="async"></div>
           <div class="mc-info">
             <div class="mc-name">かっしー</div>
             <div class="mc-sub">30代 ／ 男性</div>
@@ -1249,7 +1211,7 @@
            ============================================================ -->
       <div class="member-card appear">
         <div class="mc-head">
-          <div class="mc-avatar avatar"><svg><use href="#av-2"/></svg></div>
+          <div class="mc-avatar avatar"><img src="images/musubin.png" alt="むすびん" loading="lazy" decoding="async"></div>
           <div class="mc-info">
             <div class="mc-name">むすびん</div>
             <div class="mc-sub">40代 ／ 男性</div>
@@ -1308,7 +1270,7 @@
            ============================================================ -->
       <div class="member-card appear">
         <div class="mc-head">
-          <div class="mc-avatar avatar"><svg><use href="#av-3"/></svg></div>
+          <div class="mc-avatar avatar"><img src="images/kibachan.png" alt="きばちゃん" loading="lazy" decoding="async"></div>
           <div class="mc-info">
             <div class="mc-name">きばちゃん</div>
             <div class="mc-sub">20代 ／ 男性</div>
@@ -1367,7 +1329,7 @@
            ============================================================ -->
       <div class="member-card appear">
         <div class="mc-head">
-          <div class="mc-avatar avatar"><svg><use href="#av-4"/></svg></div>
+          <div class="mc-avatar avatar"><img src="images/dazai.png" alt="だざい" loading="lazy" decoding="async"></div>
           <div class="mc-info">
             <div class="mc-name">だざい</div>
             <div class="mc-sub">40代 ／ 男性</div>
@@ -1426,7 +1388,7 @@
            ============================================================ -->
       <div class="member-card appear">
         <div class="mc-head">
-          <div class="mc-avatar avatar"><svg><use href="#av-5"/></svg></div>
+          <div class="mc-avatar avatar"><img src="images/rio.jpeg" alt="りお" loading="lazy" decoding="async"></div>
           <div class="mc-info">
             <div class="mc-name">りお</div>
             <div class="mc-sub">40代 ／ 女性</div>
