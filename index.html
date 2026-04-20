@@ -951,13 +951,49 @@
     .faq-item.open .faq-ans { max-height: 400px; padding-bottom: 20px; }
 
     /* =====================================================
-       SECTION 10 — CTA FOOTER
+       SECTION 10 — APPLY (埋め込みフォーム)
+       ===================================================== */
+    #apply {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 120px 0 80px;
+      scroll-margin-top: 20px;
+    }
+    #apply .h-main { color: #fff; margin-bottom: 14px; }
+    .apply-info {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 44px;
+    }
+    .apply-form-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    .apply-form-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 887px;
+      border: 0;
+    }
+    @media (max-width: 700px) {
+      #apply { padding: 80px 0 50px; }
+      .apply-form-wrap iframe { height: 1100px; }
+    }
+
+    /* =====================================================
+       SECTION 11 — CTA FOOTER
        ===================================================== */
     #cta-footer {
       background: var(--dark);
       color: #fff;
       text-align: center;
-      padding: 120px 0 100px;
+      padding: 60px 0 80px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
     .footer-en {
       font-size: 0.62rem;
@@ -969,7 +1005,7 @@
     }
     #cta-footer .h-main { color: #fff; margin-bottom: 14px; }
     .footer-info { font-size: 0.88rem; color: rgba(255,255,255,0.4); margin-bottom: 44px; }
-    .footer-credit { margin-top: 80px; font-size: 0.68rem; color: rgba(255,255,255,0.18); }
+    .footer-credit { font-size: 0.68rem; color: rgba(255,255,255,0.18); text-align: center; }
 
     /* =====================================================
        RESPONSIVE
@@ -1007,6 +1043,7 @@
     <a href="#overview" role="menuitem"><span class="smn-num">07</span>Overview</a>
     <a href="#academy" role="menuitem"><span class="smn-num">08</span>About the Academy</a>
     <a href="#faq" role="menuitem"><span class="smn-num">09</span>FAQ</a>
+    <a href="#apply" role="menuitem"><span class="smn-num">10</span>Apply</a>
   </div>
 </nav>
 
@@ -1054,7 +1091,7 @@
       <span class="hero-meta-date">2026.05.10<span class="hm-wk">SUN ／ 15:00-16:30</span></span>
       <span class="hero-meta-sub">オンライン配信<span class="hm-dot"></span>参加無料<span class="hm-dot"></span>事前申込制</span>
     </div>
-    <a href="#" class="btn btn-fill">オンライン視聴を申し込む（無料）</a>
+    <a href="#apply" class="btn btn-fill">オンライン視聴を申し込む（無料）</a>
   </div>
 </section>
 
@@ -1543,7 +1580,7 @@
       </tr>
     </table>
     <div class="tc appear">
-      <a href="#" class="btn btn-fill">オンライン視聴を申し込む（無料）</a>
+      <a href="#apply" class="btn btn-fill">オンライン視聴を申し込む（無料）</a>
     </div>
   </div>
 </section>
@@ -1643,18 +1680,39 @@
 
 
 <!-- ========================================================
-     10 — CTA フッター
-     CTA #3 of 3
+     10 — APPLY (埋め込みフォーム)
+     CTA #3 of 3 — 視聴申し込みフォームを直接埋め込み
      ======================================================== -->
-<section id="cta-footer">
+<section id="apply">
   <div class="wrap">
     <div class="appear">
       <p class="footer-en">AI Reboot Academy — 1st Term Demo Day</p>
       <h2 class="h-main">100日間の成果、<br>その目で確かめてみませんか？</h2>
-      <p class="footer-info">2026年5月10日（日）15:00〜16:30 ／ オンライン配信・無料</p>
-      <a href="#" class="btn btn-fill" style="font-size:1rem; padding:18px 44px;">オンライン視聴を申し込む（無料）</a>
-      <p class="footer-credit">© AIリブートアカデミー 第1期 DEMO DAY</p>
+      <p class="apply-info">2026年5月10日（日）15:00〜16:30 ／ オンライン配信・無料</p>
+      <div class="apply-form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScJFag3Z8zBHzB_JQiMQisCofR7ahXFuc0UMrE71llB3YfOmg/viewform?embedded=true"
+          width="640"
+          height="887"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          loading="lazy"
+          title="DEMO DAY 視聴申し込みフォーム">
+          読み込んでいます…
+        </iframe>
+      </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ========================================================
+     11 — CTA フッター (コピーライト表示のみ)
+     ======================================================== -->
+<section id="cta-footer">
+  <div class="wrap">
+    <p class="footer-credit">© AIリブートアカデミー 第1期 DEMO DAY</p>
   </div>
 </section>
 
